@@ -35,9 +35,11 @@ $python bayes_optim.py
 $python3 read_file.py
 ~~~
 ## Install
-
+~~~
+pip install bayesian-optimization
+~~~
 
 
 ## Author
 
-[](https://github.com/NaotakaKawata)
+[kawata](https://github.com/NaotakaKawata)
