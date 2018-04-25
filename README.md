@@ -26,15 +26,18 @@ read_file.pyはしりとりプログラムで、bayes_optim.pyはパラメータ
 
 
 ## Usagebase
-
+最適化する場合
+~~~
 $python bayes_optim.py
-
+~~~
+パラメータが分かった後
+~~~
 $python3 read_file.py
-
+~~~
 ## Install
 
 
 
 ## Author
 
-[tcnksm](https://github.com/tcnksm)
+[](https://github.com/NaotakaKawata)
