@@ -22,6 +22,11 @@ read_file.pyはしりとりプログラムで、bayes_optim.pyはパラメータ
 
 こちらは毎日新聞のコーパスから単語を抽出した単語の語頭と語尾の分布を調べた結果だが、このように偏りが存在する。
 
+
+![語頭](https://github.com/NaotakaKawata/shiritori/blob/master/images/goto.png)
+
+![語尾](https://github.com/NaotakaKawata/shiritori/blob/master/images/gobi.png)
+
 偏りが存在すると語頭の在庫がなくなると語尾でその単語がでてしまうと在庫がないためしりとりを続けられないとう問題がある。
 
 ベイズ最適化を用いてパラメータを最適化している。
@@ -34,6 +39,7 @@ read_file.pyはしりとりプログラムで、bayes_optim.pyはパラメータ
 $python bayes_optim.py
 ~~~
 パラメータが分かった後,shiritori.pyの108～116行目の値を、result.txtで出力された値に書き換える。
+
 例：x0がウ、x1がクの出現確率に当たる
 ~~~
 $python3 shiritori.py
