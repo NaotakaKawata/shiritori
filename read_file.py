@@ -99,7 +99,6 @@ def search(tail):
     if random.random() > 0.98:
         random.shuffle(bases)
     for e, _ in enumerate(bases):
-        #if tail == n.head and "ン" != n.tail and n.tail not in ['ル']:
         n = bases[e]
         if tail == n.head and "ン" != n.tail:
 
@@ -115,22 +114,6 @@ def search(tail):
             if 'マ' == n.tail and random.random() < ps[6]: continue
             if 'イ' == n.tail and random.random() < ps[7]: continue
             if 'ワ' == n.tail and random.random() < ps[8]: continue
-        #めんどくさかったので最適なパラメータの値をベタ打ちしています。このままするならパラメータをファイルから読み込む関数を作ってください
-
-            """
-            if 'ル' == n.tail and random.random() < 1: continue
-            if 'ズ' == n.tail and random.random() < 1 : continue
-            if 'ヂ' == n.tail and random.random() < 1 : continue
-            if 'ウ' == n.tail and random.random() < 0.9280564666: continue
-            if 'ク' == n.tail and random.random() < 0.7121339035877798: continue
-            if 'ツ' == n.tail and random.random() < 0.7558545649770779: continue
-            if 'プ' == n.tail and random.random() < 0.7425469328280245: continue
-            if 'ラ' == n.tail and random.random() < 0.7774023578986695: continue
-            if 'リ' == n.tail and random.random() < 0.06087522064859526: continue
-            if 'マ' == n.tail and random.random() < 0.40989181282979575: continue
-            if 'イ' == n.tail and random.random() < 0.47528551412361997: continue
-            if 'ワ' == n.tail and random.random() < 0.24041332419338116: continue
-           """
             not_found = False
             break
     if not_found == False:
@@ -144,34 +127,11 @@ def search(tail):
 
 
 def main():
-    """
-     #最初の単語を任意の入力にしたい場合はこっち、引数として任意の単語（カタカナ）を入力
-    ini =sys.argv[1]
-    orig = ini
-    yomi = ini
 
-
-    for rep in [('ァ', 'ア'), ('ィ', 'イ'), ('ゥ', 'ウ'), ('ェ', 'エ'), ('ォ', 'オ'), ('ャ', 'ヤ'), ('ュ', 'ユ'), ('ョ', 'ヨ'), ('ヴ', 'ウ'), ('ッ', 'ツ'), ('ヅ', 'ツ'), ('ヰ', 'イ'), ('ヱ', 'エ')]:
-            yomi = yomi.replace(rep[0], rep[1])
-    for rule in conv_rules:
-        yomi = yomi.replace(rule[0], rule[1])
-
-    head = yomi[0]
-    tail = yomi[-1]
-    #print(name, orig, yomi, head, tail)
-    k = Noun()
-    k.name = name
-    k.orig = orig
-    k.yomi = yomi
-    k.tail = tail
-    k.head = head
-    k.head_tail = head + tail
-    """
     seed = bases.pop(random.randint(1, len(bases)))
     chain.append(seed)
     print(1, seed.orig, seed.yomi, seed.tail, seed.head)
-    chain.append(k)
-    print(1, len(bases),k.orig, k.yomi)
+
     for i in range(100000):
         tail = chain[-1].tail
         t = search(tail)
