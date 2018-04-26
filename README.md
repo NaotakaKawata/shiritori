@@ -33,9 +33,9 @@ read_file.pyはしりとりプログラムで、bayes_optim.pyはパラメータ
 ~~~
 $python bayes_optim.py
 ~~~
-パラメータが分かった後
+パラメータが分かった後,106～10
 ~~~
-$python3 read_file.py
+$python3 shiritori.py
 ~~~
 ## Install
 ~~~
