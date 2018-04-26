@@ -34,6 +34,9 @@ read_file.pyはしりとりプログラムで、bayes_optim.pyはパラメータ
 
 
 ## Usagebase
+
+まず同ディレクトリにしりとりで使用したい文書をMecabにかけたものをdictionary.txtとして保存してください。
+
 最適化する場合
 ~~~
 $python bayes_optim.py
