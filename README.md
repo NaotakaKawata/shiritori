@@ -33,7 +33,8 @@ read_file.pyはしりとりプログラムで、bayes_optim.pyはパラメータ
 ~~~
 $python bayes_optim.py
 ~~~
-パラメータが分かった後,106～10
+パラメータが分かった後,shiritori.pyの行目の値を、result.txtで出力された値に書き換える。
+例：x0がウ、x1がクの出現確率に当たる
 ~~~
 $python3 shiritori.py
 ~~~
